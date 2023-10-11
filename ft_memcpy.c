@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 15:17:07 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/11 15:03:21 by aantonie         ###   ########.fr       */
+/*   Created: 2023/10/10 16:52:19 by aantonie          #+#    #+#             */
+/*   Updated: 2023/10/11 15:11:22 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include "libft.h"
 
-#include <stdlib.h>
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	size_t					i;
 
-int	ft_isalnum(int c);
-
-int	ft_isalpha(int c);
-
-int	ft_isascii(int c);
-
-int	ft_isdigit(int c);
-
-int	ft_isprint(int c);
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-
-size_t  ft_strlen(const char *s);
-
-int	ft_tolower(int c);
-
-int	ft_toupper(int c);
-
-void	*ft_memset(void *b, int c, size_t len);
-
-#endif
+	if (!dst)
+		return (NULL);
+	i = 0;
+	while (i < n)
+	{
+		*(char *)(dst + i) = *(char *)(src + i);
+		i++;
+	}
+	return (dst);
+}
