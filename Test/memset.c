@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
+// works
 int main(void)
 {
     char buffer[10];
@@ -14,5 +15,7 @@ int main(void)
       printf("%c", buffer[i]);
 
     printf("\n");
+
+    return 0;
 } 
 

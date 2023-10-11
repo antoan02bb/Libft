@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 15:17:07 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/11 16:21:34 by aantonie         ###   ########.fr       */
+/*   Created: 2023/10/11 22:01:57 by aantonie          #+#    #+#             */
+/*   Updated: 2023/10/11 22:21:21 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include "libft.h"
 
-#include <stdlib.h>
+void	*ft_memmove(void *destination, const void *source, size_t len)
+{
+	char	*dest;
+	const char	*src;
+	size_t	i;
 
-int	ft_isalnum(int c);
-
-int	ft_isalpha(int c);
-
-int	ft_isascii(int c);
-
-int	ft_isdigit(int c);
-
-int	ft_isprint(int c);
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-
-size_t  ft_strlen(const char *s);
-
-int	ft_tolower(int c);
-
-int	ft_toupper(int c);
-
-void	*ft_memset(void *b, int c, size_t len);
-
-void	ft_bzero(void *s, size_t n);
-
-#endif
+	dest = (char *)destination;
+	src = (char *)source;
+	if (dest > src)
+	{
+		while (len > 0)
+		{
+			dest[len - 1] = src[len - 1];
+			len--;
+		}
+	}
+	else if (dest < src)
+	{
+		i = 0;
+        while (i < len)
+		{
+        	dest[i] = src[i];
+			i++;
+		}
+	}
+	return (dest);
+}
