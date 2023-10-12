@@ -6,7 +6,7 @@
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:17:07 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/11 16:21:34 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/10/12 11:42:36 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define LIBFT_H
 
 #include <stdlib.h>
+#include <unistd.h>
+
 
 int	ft_isalnum(int c);
 
