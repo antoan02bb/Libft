@@ -1,28 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 17:08:55 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/15 01:00:34 by aantonie         ###   ########.fr       */
+/*   Created: 2023/10/11 22:22:23 by aantonie          #+#    #+#             */
+/*   Updated: 2023/10/15 01:14:36 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+void
+	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (str == NULL)
+	int	i;
+
+	if (!dst || !src)
 		return (NULL);
-	while (*str != '\0')
+	if (dst > src)
 	{
-		if (*str == c)
+		i = (int)len - 1;
+		while (i >= 0)
 		{
-			return ((char *)str);
+			*(char *)(dst + i) = *(char *)(src + i);
+			i--;
 		}
-		str++;
 	}
-	return (NULL);
+	else
+	{
+		i = 0;
+		while (i < (int)len)
+		{
+			*(char *)(dst + i) = *(char *)(src + i);
+			i++;
+		}
+	}
+	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:17:07 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/12 17:08:40 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/10/15 00:53:39 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,11 @@ void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 
 void	*ft_memcpy(void *dst, const void *src, size_t n);
+
+char	*ft_strrchr(const char *str, int c);
+
+int		ft_strcmp(const char *str1, const char *str2);
+
+char	*ft_strchr(const char *str, int c);
 
 #endif
