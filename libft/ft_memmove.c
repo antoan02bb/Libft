@@ -6,14 +6,13 @@
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 22:22:23 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/15 01:14:36 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/10/15 01:21:53 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void
-	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int	i;
 
