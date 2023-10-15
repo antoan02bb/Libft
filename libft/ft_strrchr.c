@@ -6,7 +6,7 @@
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 19:04:48 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/14 19:07:45 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/10/15 12:54:29 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ char	*ft_strrchr(const char *str, int c)
 			result = (char *)str;
 		str++;
 	}
+	if (result == NULL && c != '\0')
+		return (NULL);
 	return (result);
 }
