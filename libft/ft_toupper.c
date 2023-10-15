@@ -5,18 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 17:57:25 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/08 13:47:37 by aantonie         ###   ########.fr       */
+/*   Created: 2023/10/15 12:59:07 by aantonie          #+#    #+#             */
+/*   Updated: 2023/10/15 12:59:19 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+int
+	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-	{
 		c -= 32;
-	}
 	return (c);
 }
