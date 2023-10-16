@@ -6,7 +6,7 @@
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:48:26 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/16 13:13:06 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/10/16 16:22:57 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ unsigned char.
 // Compare the values correctly, and cast s to char*.
 // Use pointer arithmetic to return the correct location.
 // Move to the next byte in the memory block.        
-#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
