@@ -6,7 +6,7 @@
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:17:07 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/15 12:32:05 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/10/16 16:13:05 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,9 @@ int		ft_strcmp(const char *str1, const char *str2);
 char	*ft_strchr(const char *str, int c);
 
 int		ft_atoi(const char *str);
+
+void	*ft_memchr(const void *s, int c, size_t n);
+
+size_t	ft_strlcat(char *dest, const char *source, size_t destsz);
 
 #endif
