@@ -1,30 +1,39 @@
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/16 12:48:26 by aantonie          #+#    #+#             */
+/*   Updated: 2023/10/16 13:13:06 by aantonie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int main()
-{
-	(unsigned char)
-
-
-
-	return 0;
-}
 #include "libft.h"
 
-// c -> character(byte) I want to search for
-// n -> number of bytes
+/*
+The memchr() function scans the initial n bytes of the memory
+area pointed to by s for the first instance of c.  Both c and the
+bytes of the memory area pointed to by s are interpreted as
+unsigned char.
+*/
+// Initialize i to 0.
+// Compare the values correctly, and cast s to char*.
+// Use pointer arithmetic to return the correct location.
+// Move to the next byte in the memory block.        
+#include <stddef.h>
 
-void *memchr(const void *s, int c, size_t n) 
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char *unsigned_str = (const unsigned char *)s;
-	unsigned char unsigned_chr = (unsigned char)c;
+	size_t	i;
 
-	size_t i = 0;
-	  while (i < n) {
-        if (unsigned_str[i] == unsigned_chr) {
-            return (void *)(us + i);
-        }
-        i++;
-    }
-
-    return NULL;
+	i = 0;
+	while (i < n)
+	{
+		if (*((char *)s + i) == c)
+			return ((void *)((char *)s + i));
+		i++;
+	}
+	return (NULL);
 }
