@@ -6,7 +6,7 @@
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:17:07 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/16 16:22:36 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/10/17 00:07:38 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stddef.h>
 
 typedef struct s_list
 {
