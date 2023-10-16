@@ -6,14 +6,13 @@
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:21:37 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/16 15:48:51 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/10/16 16:22:34 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h> // Include the header to resolve size_t issues
 
-static size_t	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	len;
 
