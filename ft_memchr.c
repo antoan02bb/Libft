@@ -6,7 +6,7 @@
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:48:26 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/17 00:17:29 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/10/17 00:21:06 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void
 	i = 0;
 	while (i < n)
 	{
-		if (*(unsigned char*)(s + i) == (unsigned char)c)
-			return ((void*)(s + i));
+		if (*(unsigned char *)(s + i) == (unsigned char)c)
+			return ((void *)(s + i));
 		i++;
 	}
 	return (0);

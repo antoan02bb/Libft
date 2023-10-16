@@ -6,7 +6,7 @@
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 19:04:48 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/17 00:17:32 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/10/17 00:20:42 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char
 	while (i >= 0)
 	{
 		if (s[i] == (char)c)
-			return ((char*)(s + i));
+			return ((char *)(s + i));
 		i--;
 	}
 	return (NULL);
