@@ -3,10 +3,6 @@
 // 2nd - calculate the space remaining in the destination buffer(dstsize)
 // 0alculate the total length of the concatenated string(incl. null-terminator)
 
-#include <stdio.h>
-#include <string.h>
-#include "libft.h"
-#include "ft_strlen.c"
 #include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *source, size_t destsz)
@@ -29,6 +25,9 @@ size_t	ft_strlcat(char *dest, const char *source, size_t destsz)
 		dest[i1 + i2] = '\0';
 	return (i1 + ft_strlen(source));
 }
+
+#include <stdio.h>
+#include <string.h>
 
 int main() {
     char dest[10] = "Hello,";
