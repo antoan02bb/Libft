@@ -5,24 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 15:06:12 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/11 15:09:31 by aantonie         ###   ########.fr       */
+/*   Created: 2023/10/18 03:02:43 by aantonie          #+#    #+#             */
+/*   Updated: 2023/10/18 12:16:28 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
-{
-	size_t					i;
+// The memset() function writes len bytes of value c
+// (converted to an unsigned char) to the string b
+// int t, because n is size_t and i cant comprare it with i
 
-	if (!b)
-		return (NULL);
+void	*ft_memset(void *s, int c, size_t n)
+{
+	int		i;
+	char	*temp;
+	int		t;
+
 	i = 0;
-	while (i < len)
+	temp = (char *)s;
+	t = n;
+	while (i < t)
 	{
-		*(unsigned char *)(b + i) = (unsigned char)c;
+		temp[i] = c;
 		i++;
 	}
-	return (b);
+	return (s);
 }
