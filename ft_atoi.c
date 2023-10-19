@@ -6,38 +6,37 @@
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 12:19:56 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/15 12:32:13 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/10/19 18:27:51 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// converts a string into an integer numerical representation
-// 1.Input Validation 
-// 2.Checking for Negative Sign 
-// 3.Checking for Positive Sign	
-// 4. Accumulation with Sign Consideration:
-
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *num)
 {
 	int	i;
-	int	is_neg;
-	int	result;
+	int	sign;
+	int	conv_value;
 
-	if (!str)
-		return (0);
 	i = 0;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
+	sign = 1;
+	conv_value = 0;
+	while ((num[i] >= 9 && num[i] <= 13) || num[i] == 32)
 		i++;
-	if (str[i] == '-')
-		is_neg = -1;
-	else
-		is_neg = 1;
-	if ((is_neg == -1 || str[i] == '+'))
+	if (num[i] == '\0')
+	{
+		return (0);
+	}
+	if (num[i] == '-' || num[i] == '+')
+	{
+		if (num[i] == '-')
+			sign = -sign;
 		i++;
-	result = 0;
-	while (str[i] >= '0' && str[i] <= '9')
-		result = (result * 10) + (str[i++] - '0');
-	return (result * is_neg);
+	}
+	while (num[i] >= '0' && num[i] <= '9')
+	{
+		conv_value = (num[i] - '0') + (conv_value * 10);
+		i++;
+	}
+	return (conv_value * sign);
 }

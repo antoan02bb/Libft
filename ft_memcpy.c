@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy2.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 16:52:19 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/11 15:11:22 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/10/19 12:43:04 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	size_t					i;
+// This is an example, and you can choose a suitable error code.
+// Handle the error condition, e.g., by returning an error code.
 
-	if (!dst)
-		return (NULL);
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	size_t			i;
+	unsigned char	*a;
+	unsigned char	*b;
+
+	if (!dest && !src)
+		return (0);
+	a = (unsigned char *)src;
+	b = (unsigned char *)dest;
 	i = 0;
 	while (i < n)
 	{
-		*(char *)(dst + i) = *(char *)(src + i);
+		b[i] = a[i];
 		i++;
 	}
-	return (dst);
+	return (dest);
 }
