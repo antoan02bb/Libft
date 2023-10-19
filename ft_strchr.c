@@ -6,7 +6,7 @@
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 17:08:55 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/16 16:35:09 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/10/17 15:48:49 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,32 @@
 
 char	*ft_strchr(const char *str, int c)
 {
+	size_t	i;
+
+	i = 0;
 	if (str == NULL)
 		return (NULL);
-	while (*str != '\0')
+	while (str[i] != '\0')
 	{
-		if (*str == c)
+		if (str[i] == (char)c)
 		{
-			return ((char *)str);
+			return ((char *)&str[i]);
 		}
 		str++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0' && str[i] == '\0')
 	{
-		return ((char *)str);
+		return ((char *)&str[i]);
 	}
 	return (NULL);
 }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main()
+// {
+// 	char *result = ft_strchr("teste", 'e');
+// 	printf("result: %p\n", (void *)result);
+// 	return (0);
+// }
