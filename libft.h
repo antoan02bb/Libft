@@ -6,7 +6,7 @@
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:17:07 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/22 13:47:10 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/11/03 13:24:30 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,21 @@ size_t	ft_strlcat(char *dest, const char *source, size_t destsz);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 
 void	*ft_calloc(size_t count, size_t size);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+char	*ft_strtrim(char const *s1, char const *set);
+
+char	*ft_itoa(int n);
+
+char	**ft_split(char const *str, char delimiter);
+
+char	*ft_strmapi(const char *str, char (*f)(unsigned int, char));
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+
+char	*ft_strjoin(char const *s1, char const *s2);
+
+char	*ft_strdup(const char *s1);
 
 #endif

@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 16:52:19 by aantonie          #+#    #+#             */
-/*   Updated: 2023/11/03 13:05:18 by aantonie         ###   ########.fr       */
+/*   Created: 2023/11/02 14:41:48 by aantonie          #+#    #+#             */
+/*   Updated: 2023/11/02 14:44:59 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/* 1. Apply a given function f to each character in the input string s,
+ 	passing the index of the character as the first argument and a 
+ 	pointer to the character as the second argument	*/
+
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t			i;
-	unsigned char	*a;
-	unsigned char	*b;
+	unsigned int	i;
 
-	if (!dest && !src)
-		return (0);
-	a = (unsigned char *)src;
-	b = (unsigned char *)dest;
 	i = 0;
-	while (i < n)
+	if (s == NULL || f == NULL)
 	{
-		b[i] = a[i];
+		return ;
+	}
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
 		i++;
 	}
-	return (dest);
 }
