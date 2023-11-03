@@ -6,7 +6,7 @@
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 11:39:52 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/22 14:00:24 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/10/26 12:12:28 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (count >= 2147483647 || size >= 2147483647)
 		return (NULL);
-	ptr = (void *) malloc(count * size); 
-	if(!ptr)
+	ptr = (void *) malloc(count * size);
+	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, count * size); 
+	ft_bzero(ptr, count * size);
 	return (ptr);
 }
 
