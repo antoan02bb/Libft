@@ -6,7 +6,7 @@
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:17:07 by aantonie          #+#    #+#             */
-/*   Updated: 2023/11/03 13:24:30 by aantonie         ###   ########.fr       */
+/*   Updated: 2023/11/06 02:21:29 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,19 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strjoin(char const *s1, char const *s2);
 
 char	*ft_strdup(const char *s1);
+
+char	*ft_strnstr(char const *haystack, char const *needle, size_t len);
+
+int		ft_memcmp(const void *s1, const void *s2, size_t len);
+
+int		ft_strncmp(char const *s1, char const *s2, size_t n);
+
+void	ft_putendl_fd(char *s, int fd);
+
+void	ft_putchar_fd(char c, int fd);
+
+void	ft_putstr_fd(char *s, int fd);
+
+void	ft_putnbr_fd(int n, int fd);
 
 #endif

@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 00:34:44 by aantonie          #+#    #+#             */
-/*   Updated: 2023/11/03 13:39:39 by aantonie         ###   ########.fr       */
+/*   Created: 2023/11/06 00:28:41 by aantonie          #+#    #+#             */
+/*   Updated: 2023/11/06 00:28:50 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-size_t
-	ft_strlen(const char *s)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	while (*s)
+	{
+		write(fd, s, 1);
+		s++;
+	}
 }
+
+// #include <unistd.h>
+
+// int main()
+// {
+// 	char *str = "Hello World";
+// 	int fileDescriptor = 1;
+
+// 	ft_putstr_fd(str, fileDescriptor);
+
+// 	return 0;
+// }
