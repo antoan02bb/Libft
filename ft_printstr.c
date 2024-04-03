@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_printstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 15:48:33 by aantonie          #+#    #+#             */
-/*   Updated: 2023/12/04 15:48:48 by aantonie         ###   ########.fr       */
+/*   Created: 2024/04/03 12:29:25 by aantonie          #+#    #+#             */
+/*   Updated: 2024/04/03 12:33:01 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_printstr(char *str)
 {
-	if (c >= 'a' && c <= 'z')
+	int	i;
+
+	i = 0;
+	if (str == NULL)
 	{
-		c -= 32;
+		ft_putstr_fd("(null)", 1);
+		return (6);
 	}
-	return (c);
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
 }

@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 15:48:33 by aantonie          #+#    #+#             */
-/*   Updated: 2023/12/04 15:48:48 by aantonie         ###   ########.fr       */
+/*   Created: 2023/12/01 09:50:16 by aantonie          #+#    #+#             */
+/*   Updated: 2023/12/04 15:08:07 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+// return a length of the list - READY
+int	ft_lstsize(t_list *lst)
 {
-	if (c >= 'a' && c <= 'z')
+	int	counter;
+
+	counter = 0;
+	while (lst != NULL)
 	{
-		c -= 32;
+		counter++;
+		lst = lst->next;
 	}
-	return (c);
+	return (counter);
 }

@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy2.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aantonie <aantonie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 16:52:19 by aantonie          #+#    #+#             */
-/*   Updated: 2023/10/11 14:03:22 by aantonie         ###   ########.fr       */
+/*   Created: 2023/12/06 02:56:15 by aantonie          #+#    #+#             */
+/*   Updated: 2023/12/06 03:00:51 by aantonie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	Takes as a parameter a node and frees the memory of the node's content
+	using the function 'del' given as a parameter and free the node.
+	The memory of 'next' must not be freed.
+    The content data of the node is of type void *
+*/
+
 #include "libft.h"
 
-void
-	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	size_t	i;
-
-	if (!dst)
-		return (NULL);
-	i = 0;
-	while (i < n)
-	{
-		*(char*)(dst + i) = *(char*)(src + i);
-		i++;
-	}
-	return (dst);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }
